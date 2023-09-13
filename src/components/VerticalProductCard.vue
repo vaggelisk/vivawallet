@@ -53,7 +53,7 @@ const cartStore = useCartStore()
           <h4>
             <RouterLink
               class="product_name"
-              :to="{ name: 'product', params: { id: product.id } }"
+              :to="`/`"
               >{{ product.name }}</RouterLink
             >
           </h4>
