@@ -39,44 +39,44 @@ const reName = ref( /^[a-zA-Z\s]*$/ )
 const reExpirDate = ref( /^(0[1-9]|1[0-2])\/[0-9]{2}$/ )
 
 function validation() {
-  // if (firstName.value === '') {
-  //   return false
-  // }
-  // if (lastName.value === '') {
-  //   return false
-  // }
-  // if (address.value === '') {
-  //   return false
-  // }
-  // if (postcode.value === '') {
-  //   return false
-  // }
-  // if (email.value === '') {
-  //   return false
-  // }
-  // if (cardNumber.value === '') {
-  //   return false
-  // }
-  // if (cardExpirationDate.value === '') {
-  //   return false
-  // }
-  // if (cardCvv.value === '') {
-  //   return false
-  // }
-  // if (cardName.value === '') {
-  //   return false
-  // }
+  if (firstName.value === '') {
+    return false
+  }
+  if (lastName.value === '') {
+    return false
+  }
+  if (address.value === '') {
+    return false
+  }
+  if (postcode.value === '') {
+    return false
+  }
+  if (email.value === '') {
+    return false
+  }
+  if (cardNumber.value === '') {
+    return false
+  }
+  if (cardExpirationDate.value === '') {
+    return false
+  }
+  if (cardCvv.value === '') {
+    return false
+  }
+  if (cardName.value === '') {
+    return false
+  }
   return true
 }
 
 
 function cardValidation() {
-    // if (!cardCvv.value.match(reCvv.value)) {
-    //   return {
-    //     valid: false,
-    //     message: 'CVV of card is wrong'
-    //   }
-    // }
+  if (!cardCvv.value.match(reCvv.value)) {
+    return {
+      valid: false,
+      message: 'CVV of card is wrong'
+    }
+  }
   if (!cardName.value.match(reName.value)) {
     return {
       valid: false,

@@ -28,11 +28,7 @@ export const useCartStore = defineStore('cart', () => {
   )
 
   function getVoucher(v) {
-    // discount.value.push({ name: 'EKTPOSH'})
     discount.value = v
-    // totalMoney = (100 - 0.40*100).toFixed(2)
-    console.log(discount.value)
-    console.log(v)
   }
 
   function addToCart(product: Product, quantity: number) {

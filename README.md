@@ -40,11 +40,14 @@ npx yarn install
 npx yarn dev
 ```
 
+Open browser at http://localhost:5173/
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh
 npx yarn build
 ```
+
 
 ### Lint with [ESLint](https://eslint.org/)
 
