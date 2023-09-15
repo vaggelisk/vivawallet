@@ -6,6 +6,11 @@ import { ref } from 'vue'
 
 const cartStore = useCartStore()
 const voucher = ref('')
+
+function removeDiscount() {
+  voucher.value = ''
+  cartStore.removeVoucher()
+}
 </script>
 
 <template>
@@ -85,6 +90,7 @@ const voucher = ref('')
                       type="text"
                     />
                     <input class="button" name="apply_coupon" value="Apply coupon" type="submit"  @click="() => cartStore.getVoucher(voucher)" />
+                    <input class="button-remove" name="remove_coupon" value="REMOVE COUPON" type="submit"  @click="() => removeDiscount()" />
                   </div>
                 </div>
               </div>
